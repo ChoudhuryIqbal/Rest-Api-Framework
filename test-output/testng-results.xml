@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1783" started-at="2017-03-29T03:50:45Z" finished-at="2017-03-29T03:50:47Z">
+  <suite name="Default suite" duration-ms="1913" started-at="2017-03-29T04:11:55Z" finished-at="2017-03-29T04:11:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1783" started-at="2017-03-29T03:50:45Z" finished-at="2017-03-29T03:50:47Z">
+    <test name="Default test" duration-ms="1913" started-at="2017-03-29T04:11:55Z" finished-at="2017-03-29T04:11:56Z">
       <class name="com.iqbal.testScripts.TC_001">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.iqbal.testScripts.TC_001@36d4b5c]" name="setUp" is-config="true" duration-ms="11" started-at="2017-03-28T23:50:45Z" finished-at="2017-03-28T23:50:45Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.iqbal.testScripts.TC_001@36d4b5c]" name="setUp" is-config="true" duration-ms="10" started-at="2017-03-29T00:11:55Z" finished-at="2017-03-29T00:11:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyGetAllLaptopBag()[pri:0, instance:com.iqbal.testScripts.TC_001@36d4b5c]" name="verifyGetAllLaptopBag" duration-ms="1741" started-at="2017-03-28T23:50:45Z" finished-at="2017-03-28T23:50:47Z">
+        <test-method status="PASS" signature="verifyGetAllLaptopBag()[pri:0, instance:com.iqbal.testScripts.TC_001@36d4b5c]" name="verifyGetAllLaptopBag" duration-ms="1877" started-at="2017-03-29T00:11:55Z" finished-at="2017-03-29T00:11:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGetAllLaptopBag -->

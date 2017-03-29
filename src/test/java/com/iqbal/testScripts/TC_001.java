@@ -1,5 +1,7 @@
 package com.iqbal.testScripts;
 
+import java.util.ArrayList;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,9 +16,12 @@ import com.jayway.restassured.response.Response;
 
 public class TC_001 {
 	Response response;
-
+	ArrayList<String > brandName;
 	@BeforeClass
 	public void setUp() {
+		brandName=new ArrayList<String>();
+		brandName.add("Dell");
+		brandName.add("Apple");
 
 	}
 
@@ -43,10 +48,10 @@ public class TC_001 {
 
 		if (response.getStatusCode() == 200) {
 			getBag = gson.fromJson(response.getBody().asString(), GetBag[].class);
-			String getComp[]={"Dell","Apple"};
+			//String getComp[]={"Dell","Apple"};
 			for (int i = 0; i < getBag.length; i++) {
 				//System.out.println(getBag[0].getBrandName());
-				Assert.assertEquals(getComp[i], getBag[i].getBrandName());
+				Assert.assertEquals(brandName.get(i), getBag[i].getBrandName());
 			
 			
 			}
