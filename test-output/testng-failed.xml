@@ -6,7 +6,7 @@
       <class name="com.iqbal.testScripts.TC_001">
         <methods>
           <include name="setUp"/>
-          <include name="verifyGetMessage"/>
+          <include name="verifyGetById"/>
         </methods>
       </class> <!-- com.iqbal.testScripts.TC_001 -->
     </classes>
