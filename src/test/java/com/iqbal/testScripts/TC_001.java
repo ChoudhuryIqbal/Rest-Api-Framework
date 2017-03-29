@@ -97,7 +97,7 @@ public class TC_001 {
 	@DataProvider(name = "getBagById")
 	public Object[][] getBagById() {
 
-		Object[][] result = new Object[2][1];
+		Object[][] result = new Object[bagId.size()][1];
 		for (int i = 0; i < result.length; i++) {
 			result[i][0] = bagId.get(i);
 			result[i][1]=brandName.get(i);
@@ -108,9 +108,31 @@ public class TC_001 {
 		return result;
 
 	}
-
+	@Test(dataProvider="addCountry")
+	public void verifyAddBag(String json){
+		String url=URL.lapTopBagUrl+EndPointUrl.ADD_BAG.getResourcePath();
+		response=Webservices.Post(url, json);
+		if(response.getStatusCode()==201){
+			
+			
+		}
+		
+	}
+	
+	@DataProvider(name="addCountry")
+	public Object[][] addBag(){
+		Object [][] result=new Object[2][1];
+		result[0][0]="{\"Id\":128,\"BrandName\":\"Lenove\",\"LaptopName\":\"Latitude\"}";
+		result[1][0]="{\"Id\":129,\"BrandName\":\"Asus\",\"LaptopName\":\"Latitude\"}";
+		return result;
+	
+	}
+		
+		
+	
 	public void VerifyAddCountry() {
 
 	}
+	
 
 }

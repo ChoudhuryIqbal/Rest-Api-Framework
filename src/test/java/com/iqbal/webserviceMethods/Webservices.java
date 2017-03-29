@@ -10,6 +10,7 @@ import com.jayway.restassured.specification.RequestSpecification;
  * The Class Webservices.
  */
 public class Webservices {
+	static String authToken;
 	
 	/**
 	 * Post.
@@ -50,6 +51,22 @@ public class Webservices {
 		requestSpecification.contentType(ContentType.JSON);
 		Response response = requestSpecification.put(url);
 		return response;
+	}
+	
+	
+	public static Response PostCallHeader(String uri,String json){
+		
+		RequestSpecification requestSpecification=RestAssured.given().body(json);
+		requestSpecification.contentType(ContentType.JSON);
+		
+		
+		requestSpecification.headers("Authorization",authToken);
+		
+		Response response=requestSpecification.post(uri);
+		return response;
+		
+		
+		
 	}
 
 	/**
